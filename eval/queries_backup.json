@@ -1,0 +1,322 @@
+[
+  {
+    "id": "q001",
+    "query": "laptop under 50000 with great performance, dont mind weak battery life",
+    "priority": "performance",
+    "sacrifice": "battery_life",
+    "budget": 50000,
+    "relevance": {
+      "COMGP24QHAAUK7JE": 3,
+      "COMH2TPSVSGUVKY4": 3,
+      "COMH9SJ9Q8ZZHFN7": 1,
+      "COMHGWQY66YNGVFK": 0,
+      "COMHYG8ZSP9DC2GZ": 2,
+      "COMH2TPSM9V7V38F": 3,
+      "COMHEZZTHYZ3DUK5": 1,
+      "COMH8Z2QRWQQZTCJ": 2
+    }
+  },
+  {
+    "id": "q002",
+    "query": "laptop under 80000 with great performance, dont mind weak battery life",
+    "priority": "performance",
+    "sacrifice": "battery_life",
+    "budget": 80000,
+    "relevance": {
+      "COMGP24QHAAUK7JE": 3,
+      "COMH2TPSVSGUVKY4": 3,
+      "COMHYG8ZSP9DC2GZ": 2,
+      "COMH2TPSM9V7V38F": 1,
+      "COMHEZZTHYZ3DUK5": 1,
+      "COMH8Z2QRWQQZTCJ": 2,
+      "COMGS2AJESZQCMRT": 2
+    }
+  },
+  {
+    "id": "q003",
+    "query": "laptop under 120000 with great performance, dont mind weak battery life",
+    "priority": "performance",
+    "sacrifice": "battery_life",
+    "budget": 120000,
+    "relevance": {
+      "COMGP24QHAAUK7JE": 3,
+      "COMH2TPSVSGUVKY4": 3,
+      "COMH2TPSM9V7V38F": 3,
+      "COMHEZZTHYZ3DUK5": 1,
+      "COMH8Z2QRWQQZTCJ": 2,
+      "COMGS2AJESZQCMRT": 2,
+      "COMH4B6CGZKHKUV3": 1
+    }
+  },
+  {
+    "id": "q004",
+    "query": "laptop under 50000 with great performance, dont mind heating",
+    "priority": "performance",
+    "sacrifice": "thermals",
+    "budget": 50000,
+    "relevance": {
+      "COMGP24QHAAUK7JE": 3,
+      "COMH2TPSVSGUVKY4": 3,
+      "COMH9SJ9Q8ZZHFN7": 1,
+      "COMHGWQY66YNGVFK": 1,
+      "COMHYG8ZSP9DC2GZ": 1,
+      "COMH2TPSM9V7V38F": 3
+    }
+  },
+  {
+    "id": "q005",
+    "query": "laptop under 80000 with great performance, dont mind heating",
+    "priority": "performance",
+    "sacrifice": "thermals",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q006",
+    "query": "laptop under 120000 with great performance, dont mind heating",
+    "priority": "performance",
+    "sacrifice": "thermals",
+    "budget": 120000,
+    "relevance": {}
+  },
+  {
+    "id": "q007",
+    "query": "laptop under 50000 with great performance, build quality can be average",
+    "priority": "performance",
+    "sacrifice": "build_quality",
+    "budget": 50000,
+    "relevance": {}
+  },
+  {
+    "id": "q008",
+    "query": "laptop under 80000 with great performance, build quality can be average",
+    "priority": "performance",
+    "sacrifice": "build_quality",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q009",
+    "query": "laptop under 120000 with great performance, build quality can be average",
+    "priority": "performance",
+    "sacrifice": "build_quality",
+    "budget": 120000,
+    "relevance": {}
+  },
+  {
+    "id": "q010",
+    "query": "laptop under 50000 with great performance, dont mind a basic display",
+    "priority": "performance",
+    "sacrifice": "display",
+    "budget": 50000,
+    "relevance": {}
+  },
+  {
+    "id": "q011",
+    "query": "laptop under 80000 with great performance, dont mind a basic display",
+    "priority": "performance",
+    "sacrifice": "display",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q012",
+    "query": "laptop under 120000 with great performance, dont mind a basic display",
+    "priority": "performance",
+    "sacrifice": "display",
+    "budget": 120000,
+    "relevance": {}
+  },
+  {
+    "id": "q013",
+    "query": "laptop under 50000 with good battery life, performance can be average",
+    "priority": "battery_life",
+    "sacrifice": "performance",
+    "budget": 50000,
+    "relevance": {}
+  },
+  {
+    "id": "q014",
+    "query": "laptop under 80000 with good battery life, performance can be average",
+    "priority": "battery_life",
+    "sacrifice": "performance",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q015",
+    "query": "laptop under 120000 with good battery life, performance can be average",
+    "priority": "battery_life",
+    "sacrifice": "performance",
+    "budget": 120000,
+    "relevance": {}
+  },
+  {
+    "id": "q016",
+    "query": "laptop under 50000 with good battery life, dont mind a basic display",
+    "priority": "battery_life",
+    "sacrifice": "display",
+    "budget": 50000,
+    "relevance": {}
+  },
+  {
+    "id": "q017",
+    "query": "laptop under 80000 with good battery life, dont mind a basic display",
+    "priority": "battery_life",
+    "sacrifice": "display",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q018",
+    "query": "laptop under 120000 with good battery life, dont mind a basic display",
+    "priority": "battery_life",
+    "sacrifice": "display",
+    "budget": 120000,
+    "relevance": {}
+  },
+  {
+    "id": "q019",
+    "query": "laptop under 50000 with good battery life, dont mind heating",
+    "priority": "battery_life",
+    "sacrifice": "thermals",
+    "budget": 50000,
+    "relevance": {}
+  },
+  {
+    "id": "q020",
+    "query": "laptop under 80000 with good battery life, dont mind heating",
+    "priority": "battery_life",
+    "sacrifice": "thermals",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q021",
+    "query": "laptop under 120000 with good battery life, dont mind heating",
+    "priority": "battery_life",
+    "sacrifice": "thermals",
+    "budget": 120000,
+    "relevance": {}
+  },
+  {
+    "id": "q022",
+    "query": "laptop under 50000 with a good display, dont mind weak battery life",
+    "priority": "display",
+    "sacrifice": "battery_life",
+    "budget": 50000,
+    "relevance": {}
+  },
+  {
+    "id": "q023",
+    "query": "laptop under 80000 with a good display, dont mind weak battery life",
+    "priority": "display",
+    "sacrifice": "battery_life",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q024",
+    "query": "laptop under 120000 with a good display, dont mind weak battery life",
+    "priority": "display",
+    "sacrifice": "battery_life",
+    "budget": 120000,
+    "relevance": {}
+  },
+  {
+    "id": "q025",
+    "query": "laptop under 50000 with a good display, build quality can be average",
+    "priority": "display",
+    "sacrifice": "build_quality",
+    "budget": 50000,
+    "relevance": {}
+  },
+  {
+    "id": "q026",
+    "query": "laptop under 80000 with a good display, build quality can be average",
+    "priority": "display",
+    "sacrifice": "build_quality",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q027",
+    "query": "laptop under 120000 with a good display, build quality can be average",
+    "priority": "display",
+    "sacrifice": "build_quality",
+    "budget": 120000,
+    "relevance": {}
+  },
+  {
+    "id": "q028",
+    "query": "laptop under 50000 with a good display, performance can be average",
+    "priority": "display",
+    "sacrifice": "performance",
+    "budget": 50000,
+    "relevance": {}
+  },
+  {
+    "id": "q029",
+    "query": "laptop under 80000 with a good display, performance can be average",
+    "priority": "display",
+    "sacrifice": "performance",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q030",
+    "query": "laptop under 120000 with a good display, performance can be average",
+    "priority": "display",
+    "sacrifice": "performance",
+    "budget": 120000,
+    "relevance": {}
+  },
+  {
+    "id": "q031",
+    "query": "laptop under 50000 with solid build quality, performance can be average",
+    "priority": "build_quality",
+    "sacrifice": "performance",
+    "budget": 50000,
+    "relevance": {}
+  },
+  {
+    "id": "q032",
+    "query": "laptop under 80000 with solid build quality, performance can be average",
+    "priority": "build_quality",
+    "sacrifice": "performance",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q033",
+    "query": "laptop under 120000 with solid build quality, performance can be average",
+    "priority": "build_quality",
+    "sacrifice": "performance",
+    "budget": 120000,
+    "relevance": {}
+  },
+  {
+    "id": "q034",
+    "query": "laptop under 50000 with good thermals, performance can be average",
+    "priority": "thermals",
+    "sacrifice": "performance",
+    "budget": 50000,
+    "relevance": {}
+  },
+  {
+    "id": "q035",
+    "query": "laptop under 80000 with good thermals, performance can be average",
+    "priority": "thermals",
+    "sacrifice": "performance",
+    "budget": 80000,
+    "relevance": {}
+  },
+  {
+    "id": "q036",
+    "query": "laptop under 120000 with good thermals, performance can be average",
+    "priority": "thermals",
+    "sacrifice": "performance",
+    "budget": 120000,
+    "relevance": {}
+  }
+]

@@ -1,0 +1,719 @@
+{
+  "name": "flipkart",
+  "category": {
+    "id": "ecommerce",
+    "title": "E-commerce & Marketplaces"
+  },
+  "title": "Flipkart API scraper \u2014 India's largest e-commerce marketplace (flipkart.com): product search with full filters, product detail (price/specs/variants/offers), buyer reviews, categories, sellers, similar products, available filters and autocomplete",
+  "version": "2.0.0",
+  "pii_redact_default": false,
+  "mint_reusable": null,
+  "base_path": "/flipkart/v1",
+  "spec_available": true,
+  "actions": [
+    {
+      "name": "search",
+      "description": "Flipkart product search with filters \u2014 keyword search returning product cards (title/price/mrp/discount/rating/image/url) plus the total result count, paginated. Filter by brand, price range, minimum rating, minimum discount, F-Assured and any category facet (use the `filters` action to discover what a query supports).",
+      "required_params": [
+        "q"
+      ],
+      "optional_params": [
+        "page",
+        "sort",
+        "brand",
+        "min_price",
+        "max_price",
+        "min_rating",
+        "min_discount",
+        "f_assured",
+        "no_cost_emi",
+        "include_out_of_stock",
+        "facets"
+      ],
+      "params": [
+        {
+          "name": "q",
+          "type": "string",
+          "required": true,
+          "description": "Search keyword.",
+          "on_invalid": "reject",
+          "example": "laptop",
+          "aliases": [
+            "query"
+          ]
+        },
+        {
+          "name": "page",
+          "type": "integer",
+          "required": false,
+          "description": "Result page (1-based). Page forward with meta.next_page.",
+          "on_invalid": "ignore",
+          "default": 1,
+          "example": 1,
+          "minimum": 1
+        },
+        {
+          "name": "sort",
+          "type": "enum",
+          "required": false,
+          "description": "Sort order.",
+          "on_invalid": "ignore",
+          "allowed_values": [
+            {
+              "value": "relevance",
+              "label": "Relevance"
+            },
+            {
+              "value": "popularity",
+              "label": "Popularity"
+            },
+            {
+              "value": "price_asc",
+              "label": "Price: low to high"
+            },
+            {
+              "value": "price_desc",
+              "label": "Price: high to low"
+            },
+            {
+              "value": "recency_desc",
+              "label": "Newest first"
+            }
+          ],
+          "example": "popularity"
+        },
+        {
+          "name": "brand",
+          "type": "string",
+          "required": false,
+          "description": "Filter to a brand (exact Flipkart brand name, e.g. Samsung, HP).",
+          "on_invalid": "reject",
+          "example": "Samsung"
+        },
+        {
+          "name": "min_price",
+          "type": "number",
+          "required": false,
+          "description": "Minimum price in \u20b9 (INR). Applied to the returned cards.",
+          "on_invalid": "ignore",
+          "example": 10000
+        },
+        {
+          "name": "max_price",
+          "type": "number",
+          "required": false,
+          "description": "Maximum price in \u20b9 (INR). Applied to the returned cards.",
+          "on_invalid": "ignore",
+          "example": 50000
+        },
+        {
+          "name": "min_rating",
+          "type": "enum",
+          "required": false,
+          "description": "Keep only products rated this many stars and up.",
+          "on_invalid": "ignore",
+          "allowed_values": [
+            {
+              "value": "4",
+              "label": "4\u2605 & above"
+            },
+            {
+              "value": "3",
+              "label": "3\u2605 & above"
+            },
+            {
+              "value": "2",
+              "label": "2\u2605 & above"
+            },
+            {
+              "value": "1",
+              "label": "1\u2605 & above"
+            }
+          ],
+          "example": "4"
+        },
+        {
+          "name": "min_discount",
+          "type": "enum",
+          "required": false,
+          "description": "Keep only products with at least this % discount.",
+          "on_invalid": "ignore",
+          "allowed_values": [
+            {
+              "value": "10",
+              "label": "10% or more"
+            },
+            {
+              "value": "20",
+              "label": "20% or more"
+            },
+            {
+              "value": "30",
+              "label": "30% or more"
+            },
+            {
+              "value": "40",
+              "label": "40% or more"
+            },
+            {
+              "value": "50",
+              "label": "50% or more"
+            },
+            {
+              "value": "60",
+              "label": "60% or more"
+            },
+            {
+              "value": "70",
+              "label": "70% or more"
+            },
+            {
+              "value": "80",
+              "label": "80% or more"
+            }
+          ],
+          "example": "30"
+        },
+        {
+          "name": "f_assured",
+          "type": "boolean",
+          "required": false,
+          "description": "When true, restrict to F-Assured (Flipkart-Assured quality/delivery) listings.",
+          "on_invalid": "ignore",
+          "default": false
+        },
+        {
+          "name": "no_cost_emi",
+          "type": "boolean",
+          "required": false,
+          "description": "When true, restrict to products with a No Cost EMI offer.",
+          "on_invalid": "ignore",
+          "default": false
+        },
+        {
+          "name": "include_out_of_stock",
+          "type": "boolean",
+          "required": false,
+          "description": "When true, include out-of-stock products in the results.",
+          "on_invalid": "ignore",
+          "default": false
+        },
+        {
+          "name": "facets",
+          "type": "array",
+          "required": false,
+          "description": "Advanced: raw category-facet filter fragment(s) taken from the `filters` action's `param` field (e.g. 'facets.processor[]=Core i7'). Pass one string or a list to stack several facets.",
+          "on_invalid": "ignore",
+          "example": [
+            "facets.processor[]=Core i7",
+            "facets.ram_capacity[]=16 GB"
+          ]
+        }
+      ],
+      "returns": "results[] (title, price, mrp, discount, rating, image, url) + total_results + filters_applied + page + has_more + next_page",
+      "cacheable": true,
+      "cache_ttl_seconds": 1800,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {
+        "q": "laptop"
+      }
+    },
+    {
+      "name": "product",
+      "description": "full product page facts (title/price/mrp/rating/specs/highlights/images/seller/similar)",
+      "required_params": [],
+      "optional_params": [
+        "url",
+        "itm_id"
+      ],
+      "params": [
+        {
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "description": "Full Flipkart product URL.",
+          "on_invalid": "reject",
+          "example": "https://www.flipkart.com/apple-iphone-16-white-128-gb/p/itm7c0281cd247be"
+        },
+        {
+          "name": "itm_id",
+          "type": "string",
+          "required": false,
+          "description": "Flipkart item id (the itmXXXX in a /p/ URL).",
+          "on_invalid": "reject",
+          "example": "itm5a14f3731bf15"
+        }
+      ],
+      "returns": "product{title, brand, breadcrumbs[], description, price, mrp, discount_percent, currency, rating, rating_count, review_count, rating_breakup, parameter_ratings, in_stock, seller{}, variants[]{value,price,in_stock,url}, offers[]{type,title,value}, images[], highlights[], specifications[]{name,value}, return_policy, cod_available, no_cost_emi, delivery, similar_products[]}",
+      "cacheable": true,
+      "cache_ttl_seconds": 3600,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {
+        "itm_id": "itm5a14f3731bf15"
+      }
+    },
+    {
+      "name": "reviews",
+      "description": "Flipkart buyer reviews for a product, paginated \u2014 each review has rating, title, body, reviewer name, location, certified-buyer badge, helpful/up/down votes and date, plus the product's total review count. Page through with meta.next_page to collect them all.",
+      "required_params": [],
+      "optional_params": [
+        "url",
+        "slug",
+        "itm_id",
+        "page",
+        "sort"
+      ],
+      "params": [
+        {
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "description": "Full Flipkart product URL.",
+          "on_invalid": "reject",
+          "example": "https://www.flipkart.com/apple-iphone-16-white-128-gb/p/itm7c0281cd247be"
+        },
+        {
+          "name": "slug",
+          "type": "string",
+          "required": false,
+          "description": "Product slug (the part before /p/; derived from url if omitted).",
+          "on_invalid": "reject"
+        },
+        {
+          "name": "itm_id",
+          "type": "string",
+          "required": false,
+          "description": "Flipkart item id (the itmXXXX in a /p/ URL).",
+          "on_invalid": "reject",
+          "example": "itm5a14f3731bf15"
+        },
+        {
+          "name": "page",
+          "type": "integer",
+          "required": false,
+          "description": "Result page (1-based). Page forward with meta.next_page.",
+          "on_invalid": "ignore",
+          "default": 1,
+          "example": 1,
+          "minimum": 1
+        },
+        {
+          "name": "sort",
+          "type": "enum",
+          "required": false,
+          "description": "Review ordering.",
+          "on_invalid": "ignore",
+          "allowed_values": [
+            {
+              "value": "MOST_RECENT",
+              "label": "Most recent"
+            },
+            {
+              "value": "MOST_HELPFUL",
+              "label": "Most helpful"
+            },
+            {
+              "value": "POSITIVE_FIRST",
+              "label": "Positive first"
+            },
+            {
+              "value": "NEGATIVE_FIRST",
+              "label": "Negative first"
+            }
+          ],
+          "example": "MOST_RECENT"
+        }
+      ],
+      "returns": "reviews[]{rating, title, text, author, location, certified_buyer, helpful_count, upvote, downvote, created} + total_review_count + itm_id + page + has_more + next_page",
+      "cacheable": true,
+      "cache_ttl_seconds": 1800,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {
+        "itm_id": "itm5a14f3731bf15"
+      }
+    },
+    {
+      "name": "category",
+      "description": "category/browse listing cards from a Flipkart category URL/path \u2014 a `/pr?sid=\u2026` category link, a `~cs-\u2026` curated collection, or a store/hub page such as /mobiles or /mobile-phones-store",
+      "required_params": [],
+      "optional_params": [
+        "url",
+        "path",
+        "page"
+      ],
+      "params": [
+        {
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "description": "Full Flipkart category URL. (category needs url OR path.)",
+          "on_invalid": "reject",
+          "example": "https://www.flipkart.com/mobiles/pr?sid=tyy,4io"
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "required": false,
+          "description": "Site-relative category path (alternative to url).",
+          "on_invalid": "reject"
+        },
+        {
+          "name": "page",
+          "type": "integer",
+          "required": false,
+          "description": "Result page (1-based). Page forward with meta.next_page.",
+          "on_invalid": "ignore",
+          "default": 1,
+          "example": 1,
+          "minimum": 1
+        }
+      ],
+      "returns": "results[] listing cards, source, page, has_more, next_page",
+      "cacheable": true,
+      "cache_ttl_seconds": 1800,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {}
+    },
+    {
+      "name": "browse",
+      "description": "Alias of the `category` action \u2014 browse/listing cards from a Flipkart category URL or site-relative path. (browse needs url OR path.)",
+      "required_params": [],
+      "optional_params": [
+        "url",
+        "path",
+        "page"
+      ],
+      "params": [
+        {
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "description": "Full Flipkart category URL (alias of the category action). (browse needs url OR path.)",
+          "on_invalid": "reject",
+          "example": "https://www.flipkart.com/mobiles/pr?sid=tyy,4io"
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "required": false,
+          "description": "Site-relative category path (alternative to url), e.g. /mobiles/pr?sid=tyy,4io.",
+          "on_invalid": "reject"
+        },
+        {
+          "name": "page",
+          "type": "integer",
+          "required": false,
+          "description": "Result page (1-based). Page forward with meta.next_page.",
+          "on_invalid": "ignore",
+          "default": 1,
+          "example": 1,
+          "minimum": 1
+        }
+      ],
+      "returns": "results[] listing cards (same as category), source, page, has_more, next_page",
+      "cacheable": true,
+      "cache_ttl_seconds": 1800,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {}
+    },
+    {
+      "name": "similar",
+      "description": "similar/related products from a product page reco widgets",
+      "required_params": [],
+      "optional_params": [
+        "url",
+        "itm_id",
+        "product_id"
+      ],
+      "params": [
+        {
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "description": "Full Flipkart product URL.",
+          "on_invalid": "reject",
+          "example": "https://www.flipkart.com/apple-iphone-16-white-128-gb/p/itm7c0281cd247be"
+        },
+        {
+          "name": "itm_id",
+          "type": "string",
+          "required": false,
+          "description": "Flipkart item id (the itmXXXX in a /p/ URL).",
+          "on_invalid": "reject",
+          "example": "itm5a14f3731bf15"
+        },
+        {
+          "name": "product_id",
+          "type": "string",
+          "required": false,
+          "description": "Flipkart product id (FSN) to exclude from results.",
+          "on_invalid": "reject"
+        }
+      ],
+      "returns": "results[] related products (title, price, rating, url)",
+      "cacheable": true,
+      "cache_ttl_seconds": 1800,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {}
+    },
+    {
+      "name": "seller",
+      "description": "Who sells a product: seller id, fulfilment and availability, resolved from a product URL \u2014 plus storefront catalog cards when a storefront path is supplied. Start with `product_url` (the live-verified route); Flipkart has no public /seller/<id> storefront, so a bare `seller_id` returns metadata only.",
+      "required_params": [],
+      "optional_params": [
+        "product_url",
+        "url",
+        "seller_id",
+        "seller_path",
+        "seller_url",
+        "product_id",
+        "page"
+      ],
+      "params": [
+        {
+          "name": "product_url",
+          "type": "string",
+          "required": false,
+          "description": "Flipkart product URL to resolve the seller from \u2014 the recommended locator.",
+          "on_invalid": "reject",
+          "example": "https://www.flipkart.com/apple-iphone-16-white-128-gb/p/itm7c0281cd247be"
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "description": "Generic Flipkart URL (seller storefront or product); treated like product_url when it points at a product.",
+          "on_invalid": "reject"
+        },
+        {
+          "name": "seller_id",
+          "type": "string",
+          "required": false,
+          "description": "Flipkart seller id. Note: Flipkart publishes no /seller/<id> storefront, so this alone yields no catalog \u2014 use product_url, or seller_path/seller_url if you already have a storefront link.",
+          "on_invalid": "reject"
+        },
+        {
+          "name": "seller_path",
+          "type": "string",
+          "required": false,
+          "description": "Site-relative seller storefront path.",
+          "on_invalid": "reject"
+        },
+        {
+          "name": "seller_url",
+          "type": "string",
+          "required": false,
+          "description": "Full seller storefront URL.",
+          "on_invalid": "reject"
+        },
+        {
+          "name": "product_id",
+          "type": "string",
+          "required": false,
+          "description": "Product id for seller-of-this-product lookup.",
+          "on_invalid": "reject"
+        },
+        {
+          "name": "page",
+          "type": "integer",
+          "required": false,
+          "description": "Result page (1-based). Page forward with meta.next_page.",
+          "on_invalid": "ignore",
+          "default": 1,
+          "example": 1,
+          "minimum": 1
+        }
+      ],
+      "returns": "seller{seller_id, catalog_count, ...}, results[] storefront cards, page, has_more, next_page",
+      "cacheable": true,
+      "cache_ttl_seconds": 1800,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {}
+    },
+    {
+      "name": "autocomplete",
+      "description": "search autosuggest suggestions for a partial query",
+      "required_params": [
+        "q"
+      ],
+      "optional_params": [],
+      "params": [
+        {
+          "name": "q",
+          "type": "string",
+          "required": true,
+          "description": "Search keyword.",
+          "on_invalid": "reject",
+          "example": "laptop",
+          "aliases": [
+            "query"
+          ]
+        }
+      ],
+      "returns": "suggestions[] {text, query, source}",
+      "cacheable": true,
+      "cache_ttl_seconds": 600,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {
+        "q": "laptop"
+      }
+    },
+    {
+      "name": "categories",
+      "description": "top-level navigation/category links from homepage state",
+      "required_params": [],
+      "optional_params": [],
+      "params": [],
+      "returns": "categories[] {title, url} from the homepage navigation",
+      "cacheable": true,
+      "cache_ttl_seconds": 86400,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {}
+    },
+    {
+      "name": "variants",
+      "description": "Product variants (the sibling SKUs \u2014 color/storage/size) each with its OWN price, stock status and product URL, from the product page.",
+      "required_params": [],
+      "optional_params": [
+        "url",
+        "itm_id",
+        "product_id"
+      ],
+      "params": [
+        {
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "description": "Full Flipkart product URL.",
+          "on_invalid": "reject",
+          "example": "https://www.flipkart.com/apple-iphone-16-white-128-gb/p/itm7c0281cd247be"
+        },
+        {
+          "name": "itm_id",
+          "type": "string",
+          "required": false,
+          "description": "Flipkart item id (the itmXXXX in a /p/ URL).",
+          "on_invalid": "reject",
+          "example": "itm5a14f3731bf15"
+        },
+        {
+          "name": "product_id",
+          "type": "string",
+          "required": false,
+          "description": "Flipkart product id (FSN).",
+          "on_invalid": "reject"
+        }
+      ],
+      "returns": "variants[]{value, product_id, price, currency, in_stock, url}, product_id",
+      "cacheable": true,
+      "cache_ttl_seconds": 3600,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {}
+    },
+    {
+      "name": "filters",
+      "description": "Available search filters (facets) for a query \u2014 every filter Flipkart offers for these results: brand, price, rating, discount, offers, availability and category-specific facets (processor, RAM, screen size, etc.), each value carrying a count and a ready-to-use filter `param`. Feed a value's `param` back into search's `facets` argument.",
+      "required_params": [
+        "q"
+      ],
+      "optional_params": [
+        "brand"
+      ],
+      "params": [
+        {
+          "name": "q",
+          "type": "string",
+          "required": true,
+          "description": "Search keyword.",
+          "on_invalid": "reject",
+          "example": "laptop",
+          "aliases": [
+            "query"
+          ]
+        },
+        {
+          "name": "brand",
+          "type": "string",
+          "required": false,
+          "description": "Optionally scope the facets to a brand first.",
+          "on_invalid": "reject"
+        }
+      ],
+      "returns": "filters[]{id, title, values[]{value, count, param, selected}} + total_results + query",
+      "cacheable": true,
+      "cache_ttl_seconds": 1800,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {
+        "q": "laptop"
+      }
+    },
+    {
+      "name": "offers",
+      "description": "Bank, EMI, exchange and cashback offers for a product (the offer strip on the product page): e.g. 'Flipkart Axis Bank Card 5% cashback', 'Exchange offer up to \u20b9X off', 'No Cost EMI'. Honest-empty when a product has no active offers.",
+      "required_params": [],
+      "optional_params": [
+        "url",
+        "itm_id"
+      ],
+      "params": [
+        {
+          "name": "url",
+          "type": "string",
+          "required": false,
+          "description": "Full Flipkart product URL.",
+          "on_invalid": "reject",
+          "example": "https://www.flipkart.com/apple-iphone-16-white-128-gb/p/itm7c0281cd247be"
+        },
+        {
+          "name": "itm_id",
+          "type": "string",
+          "required": false,
+          "description": "Flipkart item id (the itmXXXX in a /p/ URL).",
+          "on_invalid": "reject",
+          "example": "itm5a14f3731bf15"
+        }
+      ],
+      "returns": "offers[]{type, title, value} + no_cost_emi + cod_available + product_id",
+      "cacheable": true,
+      "cache_ttl_seconds": 1800,
+      "pricing": {
+        "mode": "flat",
+        "credits": 1
+      },
+      "example_params": {}
+    }
+  ]
+}

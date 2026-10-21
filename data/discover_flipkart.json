@@ -1,0 +1,17 @@
+{
+  "ok": false,
+  "meta": {
+    "api": "flipkart",
+    "endpoint": "schema",
+    "mode": "live",
+    "latency_ms": 6.0,
+    "record_count": 0,
+    "bytes": 0,
+    "cache_hit": false
+  },
+  "error": {
+    "code": "UNKNOWN_ACTION",
+    "message": "unknown action 'schema'",
+    "retryable": false
+  }
+}

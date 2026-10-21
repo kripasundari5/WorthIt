@@ -1,0 +1,572 @@
+{
+  "ok": true,
+  "meta": {
+    "api": "flipkart",
+    "endpoint": "reviews",
+    "mode": "live",
+    "latency_ms": 2970.6,
+    "record_count": 10,
+    "bytes": 726742,
+    "cache_hit": false,
+    "extra": {
+      "url": "https://www.flipkart.com/product/product-reviews/itm2a48b3e7ebd9c?page=1&sortOrder=MOST_RECENT",
+      "total_review_count": 221,
+      "page": 1,
+      "page_size": 10,
+      "has_more": true,
+      "next_page": 2
+    }
+  },
+  "data": {
+    "reviews": [
+      {
+        "id": "5e315272-9348-4e59-9dfb-25e62cc1fb64",
+        "title": "Fabulous!",
+        "text": "Excellent laptop just go for it without any second thought the seller is great",
+        "rating": 5,
+        "author": "Kabilan civil",
+        "created": "5 days ago",
+        "location": "Namakkal, Tamil Nadu",
+        "certified_buyer": true,
+        "helpful_count": 0,
+        "upvote": null,
+        "downvote": null,
+        "images": [],
+        "product_attributes": [
+          {
+            "name": "Color",
+            "value": "Graphite Black"
+          },
+          {
+            "name": "Dedicated Graphic Memory Capacity",
+            "value": "4 GB"
+          },
+          {
+            "name": "Processor",
+            "value": "Ryzen 7 | 170"
+          },
+          {
+            "name": "SSD Capacity",
+            "value": "512 GB"
+          },
+          {
+            "name": "Screen Size",
+            "value": "15.6 inch"
+          },
+          {
+            "name": "System Memory",
+            "value": "16 GB"
+          }
+        ],
+        "url": "/reviews/COMHHNH8ZRHTGJ7H:96?reviewId=5e315272-9348-4e59-9dfb-25e62cc1fb64"
+      },
+      {
+        "id": "ea7d775b-a44c-40e2-b7b4-7f09b5cc26b3",
+        "title": "Worth the money",
+        "text": "Everything is perfect but hitting issue.",
+        "rating": 4,
+        "author": "NAYAN JYOTI  Das",
+        "created": "7 days ago",
+        "location": "Goalpara, Assam",
+        "certified_buyer": true,
+        "helpful_count": 0,
+        "upvote": null,
+        "downvote": null,
+        "images": [],
+        "product_attributes": [
+          {
+            "name": "Color",
+            "value": "Black"
+          },
+          {
+            "name": "Dedicated Graphic Memory Capacity",
+            "value": "4 GB"
+          },
+          {
+            "name": "Processor",
+            "value": "Ryzen 7 | 7445HS"
+          },
+          {
+            "name": "SSD Capacity",
+            "value": "512 GB"
+          },
+          {
+            "name": "Screen Size",
+            "value": "15.6 Inch"
+          },
+          {
+            "name": "System Memory",
+            "value": "16 GB"
+          }
+        ],
+        "url": "/reviews/COMHEDHRYUAEEEJG:278?reviewId=ea7d775b-a44c-40e2-b7b4-7f09b5cc26b3"
+      },
+      {
+        "id": "5b569c17-4957-4e9a-8570-973ec4125480",
+        "title": "Must buy!",
+        "text": "Good purchase",
+        "rating": 5,
+        "author": "Rohan Marak",
+        "created": "9 days ago",
+        "location": "West Tripura, Tripura",
+        "certified_buyer": true,
+        "helpful_count": 0,
+        "upvote": null,
+        "downvote": null,
+        "images": [
+          {
+            "action": {
+              "action": null,
+              "constraints": null,
+              "customTrackingEvents": null,
+              "fallback": null,
+              "loginType": "LOGIN_NOT_REQUIRED",
+              "nonWidgetizeRedirection": null,
+              "omnitureData": null,
+              "omnitureTracking": null,
+              "originalUrl": "/review-image-fullscreen?pid=COMHEDHRYUAEEEJG&imageId=blobio-imr_01a1ce7b017a4923998413009a4147c7.jpg&reviewReferenceId=COMHEDHRYUAEEEJG:276&language=en",
+              "params": {
+                "imageId": "blobio-imr_01a1ce7b017a4923998413009a4147c7.jpg",
+                "imagesShown": 1,
+                "screenName": "productReviewFullScreenPage",
+                "horizontallyPaginated": true,
+                "paginationUrl": "/review-image-grid?pid=COMHEDHRYUAEEEJG&reviewId=5b569c17-4957-4e9a-8570-973ec4125480&reviewReferenceId=COMHEDHRYUAEEEJG:276",
+                "totalImageCount": 1
+              },
+              "requiredPermissionType": null,
+              "retry": null,
+              "screenType": "multiWidgetPage",
+              "storeValue": {},
+              "subType": null,
+              "tracking": {},
+              "triggerExtraStandardEvents": null,
+              "type": "NAVIGATION",
+              "url": "/review-image-fullscreen?pid=COMHEDHRYUAEEEJG&imageId=blobio-imr_01a1ce7b017a4923998413009a4147c7.jpg&reviewReferenceId=COMHEDHRYUAEEEJG:276&language=en",
+              "validationMeta": null,
+              "widgetTracking": null,
+              "widgetizedActions": null
+            },
+            "metaData": null,
+            "rcType": null,
+            "tracking": null,
+            "trackingData": null,
+            "value": {
+              "type": "ReviewImage",
+              "imageId": "blobio-imr_01a1ce7b017a4923998413009a4147c7.jpg",
+              "imageURL": "https://rukminim1.flixcart.com/blobio/{@width}/{@height}/imr/blobio-imr_01a1ce7b017a4923998413009a4147c7.jpg?q={@quality}",
+              "viewType": "DEFAULT_VIEW"
+            }
+          }
+        ],
+        "product_attributes": [
+          {
+            "name": "Color",
+            "value": "Black"
+          },
+          {
+            "name": "Dedicated Graphic Memory Capacity",
+            "value": "4 GB"
+          },
+          {
+            "name": "Processor",
+            "value": "Ryzen 7 | 7445HS"
+          },
+          {
+            "name": "SSD Capacity",
+            "value": "512 GB"
+          },
+          {
+            "name": "Screen Size",
+            "value": "15.6 Inch"
+          },
+          {
+            "name": "System Memory",
+            "value": "16 GB"
+          }
+        ],
+        "url": "/reviews/COMHEDHRYUAEEEJG:276?reviewId=5b569c17-4957-4e9a-8570-973ec4125480"
+      },
+      {
+        "id": "5bc8750f-dd96-4065-96e0-a7867f082a64",
+        "title": "Perfect product!",
+        "text": "Good",
+        "rating": 5,
+        "author": "Karunakar Badugu ",
+        "created": "9 days ago",
+        "location": "Guntur District, Andhra Pradesh",
+        "certified_buyer": true,
+        "helpful_count": 0,
+        "upvote": null,
+        "downvote": null,
+        "images": [],
+        "product_attributes": [
+          {
+            "name": "Color",
+            "value": "Black"
+          },
+          {
+            "name": "Dedicated Graphic Memory Capacity",
+            "value": "4 GB"
+          },
+          {
+            "name": "Processor",
+            "value": "Ryzen 7 | 7445HS"
+          },
+          {
+            "name": "SSD Capacity",
+            "value": "512 GB"
+          },
+          {
+            "name": "Screen Size",
+            "value": "15.6 Inch"
+          },
+          {
+            "name": "System Memory",
+            "value": "16 GB"
+          }
+        ],
+        "url": "/reviews/COMHEDHRYUAEEEJG:275?reviewId=5bc8750f-dd96-4065-96e0-a7867f082a64"
+      },
+      {
+        "id": "609f356b-dab8-4a1b-bfd2-f3e85528cec4",
+        "title": "Classy product",
+        "text": "Good...",
+        "rating": 5,
+        "author": "Flipkart Customer",
+        "created": "9 days ago",
+        "location": "Thanjavur, Tamil Nadu",
+        "certified_buyer": true,
+        "helpful_count": 0,
+        "upvote": null,
+        "downvote": null,
+        "images": [
+          {
+            "action": {
+              "action": null,
+              "constraints": null,
+              "customTrackingEvents": null,
+              "fallback": null,
+              "loginType": "LOGIN_NOT_REQUIRED",
+              "nonWidgetizeRedirection": null,
+              "omnitureData": null,
+              "omnitureTracking": null,
+              "originalUrl": "/review-image-fullscreen?pid=COMHHNH8ZRHTGJ7H&imageId=blobio-imr_af3d20fc59e5426c819703baa1a783ca.jpg&reviewReferenceId=COMHHNH8ZRHTGJ7H:94&language=en",
+              "params": {
+                "imageId": "blobio-imr_af3d20fc59e5426c819703baa1a783ca.jpg",
+                "imagesShown": 1,
+                "screenName": "productReviewFullScreenPage",
+                "horizontallyPaginated": true,
+                "paginationUrl": "/review-image-grid?pid=COMHHNH8ZRHTGJ7H&reviewId=609f356b-dab8-4a1b-bfd2-f3e85528cec4&reviewReferenceId=COMHHNH8ZRHTGJ7H:94",
+                "totalImageCount": 1
+              },
+              "requiredPermissionType": null,
+              "retry": null,
+              "screenType": "multiWidgetPage",
+              "storeValue": {},
+              "subType": null,
+              "tracking": {},
+              "triggerExtraStandardEvents": null,
+              "type": "NAVIGATION",
+              "url": "/review-image-fullscreen?pid=COMHHNH8ZRHTGJ7H&imageId=blobio-imr_af3d20fc59e5426c819703baa1a783ca.jpg&reviewReferenceId=COMHHNH8ZRHTGJ7H:94&language=en",
+              "validationMeta": null,
+              "widgetTracking": null,
+              "widgetizedActions": null
+            },
+            "metaData": null,
+            "rcType": null,
+            "tracking": null,
+            "trackingData": null,
+            "value": {
+              "type": "ReviewImage",
+              "imageId": "blobio-imr_af3d20fc59e5426c819703baa1a783ca.jpg",
+              "imageURL": "https://rukminim1.flixcart.com/blobio/{@width}/{@height}/imr/blobio-imr_af3d20fc59e5426c819703baa1a783ca.jpg?q={@quality}",
+              "viewType": "DEFAULT_VIEW"
+            }
+          }
+        ],
+        "product_attributes": [
+          {
+            "name": "Color",
+            "value": "Graphite Black"
+          },
+          {
+            "name": "Dedicated Graphic Memory Capacity",
+            "value": "4 GB"
+          },
+          {
+            "name": "Processor",
+            "value": "Ryzen 7 | 170"
+          },
+          {
+            "name": "SSD Capacity",
+            "value": "512 GB"
+          },
+          {
+            "name": "Screen Size",
+            "value": "15.6 inch"
+          },
+          {
+            "name": "System Memory",
+            "value": "16 GB"
+          }
+        ],
+        "url": "/reviews/COMHHNH8ZRHTGJ7H:94?reviewId=609f356b-dab8-4a1b-bfd2-f3e85528cec4"
+      },
+      {
+        "id": "963285cd-5fcb-4a7d-b5fb-4f2d3c8319ed",
+        "title": "Brilliant",
+        "text": "Highly recommended, monster machine",
+        "rating": 5,
+        "author": "Govind kumar",
+        "created": "10 days ago",
+        "location": "Faridabad, Haryana",
+        "certified_buyer": true,
+        "helpful_count": 0,
+        "upvote": null,
+        "downvote": null,
+        "images": [],
+        "product_attributes": [
+          {
+            "name": "Color",
+            "value": "Black"
+          },
+          {
+            "name": "Dedicated Graphic Memory Capacity",
+            "value": "4 GB"
+          },
+          {
+            "name": "Processor",
+            "value": "Ryzen 7 | 7445HS"
+          },
+          {
+            "name": "SSD Capacity",
+            "value": "512 GB"
+          },
+          {
+            "name": "Screen Size",
+            "value": "15.6 Inch"
+          },
+          {
+            "name": "System Memory",
+            "value": "16 GB"
+          }
+        ],
+        "url": "/reviews/COMHEDHRYUAEEEJG:274?reviewId=963285cd-5fcb-4a7d-b5fb-4f2d3c8319ed"
+      },
+      {
+        "id": "e9648924-ad32-4f45-a9c2-974f7a5af7b3",
+        "title": "Worth the money",
+        "text": "General reviews :\n1. It's a gaming laptop for sure, GPU and CPU workings are well optimized and also with Armoury Crate you can further customise as per your liking. Temparature is well controled thanks to the cooling system.\n2. Backlit keyboard is good and decent key travel though I have faced some conflict between dynamic lighting and Armoury Crate lighting for lighting style.\n3. The screen will flick when change in power source. Colour are vibrant as expected from Asus. You can change the tone via Armoury Crate.\n4. Sound is timid but clear.\n5. Did not faced connectivity issues.\n\nProblems I faced :\n1. Within 5 months screen blackout. \n2. Once the screen issue solved, One side Speaker stopped working\n\nCustomer care service:\n1. Solved screen issue within 4 days but they took the laptop with them and replaced some chips.\n2. For speaker issue they tried to troubleshoot remotely, when not fixed they send on-spot engineer and tested the speaker physically and found faulty speaker and ordered for a new pair and will be replaced at home (on progress) will take 3 - 4 days",
+        "rating": 4,
+        "author": "Arkya Baidya",
+        "created": "12 days ago",
+        "location": "Kolkata, West Bengal",
+        "certified_buyer": true,
+        "helpful_count": 0,
+        "upvote": null,
+        "downvote": null,
+        "images": [
+          {
+            "action": {
+              "action": null,
+              "constraints": null,
+              "customTrackingEvents": null,
+              "fallback": null,
+              "loginType": "LOGIN_NOT_REQUIRED",
+              "nonWidgetizeRedirection": null,
+              "omnitureData": null,
+              "omnitureTracking": null,
+              "originalUrl": "/review-image-fullscreen?pid=COMHEDHRYUAEEEJG&imageId=blobio-imr_dd6586e6e73348528753423d325286cd.jpg&reviewReferenceId=COMHEDHRYUAEEEJG:273&language=en",
+              "params": {
+                "imageId": "blobio-imr_dd6586e6e73348528753423d325286cd.jpg",
+                "imagesShown": 1,
+                "screenName": "productReviewFullScreenPage",
+                "horizontallyPaginated": true,
+                "paginationUrl": "/review-image-grid?pid=COMHEDHRYUAEEEJG&reviewId=e9648924-ad32-4f45-a9c2-974f7a5af7b3&reviewReferenceId=COMHEDHRYUAEEEJG:273",
+                "totalImageCount": 1
+              },
+              "requiredPermissionType": null,
+              "retry": null,
+              "screenType": "multiWidgetPage",
+              "storeValue": {},
+              "subType": null,
+              "tracking": {},
+              "triggerExtraStandardEvents": null,
+              "type": "NAVIGATION",
+              "url": "/review-image-fullscreen?pid=COMHEDHRYUAEEEJG&imageId=blobio-imr_dd6586e6e73348528753423d325286cd.jpg&reviewReferenceId=COMHEDHRYUAEEEJG:273&language=en",
+              "validationMeta": null,
+              "widgetTracking": null,
+              "widgetizedActions": null
+            },
+            "metaData": null,
+            "rcType": null,
+            "tracking": null,
+            "trackingData": null,
+            "value": {
+              "type": "ReviewImage",
+              "imageId": "blobio-imr_dd6586e6e73348528753423d325286cd.jpg",
+              "imageURL": "https://rukminim1.flixcart.com/blobio/{@width}/{@height}/imr/blobio-imr_dd6586e6e73348528753423d325286cd.jpg?q={@quality}",
+              "viewType": "DEFAULT_VIEW"
+            }
+          }
+        ],
+        "product_attributes": [
+          {
+            "name": "Color",
+            "value": "Black"
+          },
+          {
+            "name": "Dedicated Graphic Memory Capacity",
+            "value": "4 GB"
+          },
+          {
+            "name": "Processor",
+            "value": "Ryzen 7 | 7445HS"
+          },
+          {
+            "name": "SSD Capacity",
+            "value": "512 GB"
+          },
+          {
+            "name": "Screen Size",
+            "value": "15.6 Inch"
+          },
+          {
+            "name": "System Memory",
+            "value": "16 GB"
+          }
+        ],
+        "url": "/reviews/COMHEDHRYUAEEEJG:273?reviewId=e9648924-ad32-4f45-a9c2-974f7a5af7b3"
+      },
+      {
+        "id": "e234f15a-d1bd-407f-8f48-66b2e1cb991e",
+        "title": "Pretty good",
+        "text": "No MS office available in this Laptop, not happy with sound, very low ... If you want a high sound performance laptop,then this is not for you... Although you have to purchase key/subscriptions for all like MS Office etcs",
+        "rating": 4,
+        "author": "Er Ashish Sharma",
+        "created": "16 days ago",
+        "location": "Faridabad, Haryana",
+        "certified_buyer": true,
+        "helpful_count": 0,
+        "upvote": null,
+        "downvote": null,
+        "images": [],
+        "product_attributes": [
+          {
+            "name": "Color",
+            "value": "Graphite Black"
+          },
+          {
+            "name": "Dedicated Graphic Memory Capacity",
+            "value": "4 GB"
+          },
+          {
+            "name": "Processor",
+            "value": "Ryzen 7 | 170"
+          },
+          {
+            "name": "SSD Capacity",
+            "value": "512 GB"
+          },
+          {
+            "name": "Screen Size",
+            "value": "15.6 inch"
+          },
+          {
+            "name": "System Memory",
+            "value": "16 GB"
+          }
+        ],
+        "url": "/reviews/COMHHNH8ZRHTGJ7H:91?reviewId=e234f15a-d1bd-407f-8f48-66b2e1cb991e"
+      },
+      {
+        "id": "fe1c6030-1e4a-417b-8c9f-b797a31d0411",
+        "title": "Very poor",
+        "text": "Very bad",
+        "rating": 1,
+        "author": "Aditya narayan  Mohanty",
+        "created": "21 days ago",
+        "location": "Anugul District, Odisha",
+        "certified_buyer": true,
+        "helpful_count": 2,
+        "upvote": null,
+        "downvote": null,
+        "images": [],
+        "product_attributes": [
+          {
+            "name": "Color",
+            "value": "Graphite Black"
+          },
+          {
+            "name": "Dedicated Graphic Memory Capacity",
+            "value": "4 GB"
+          },
+          {
+            "name": "Processor",
+            "value": "Ryzen 7 | 170"
+          },
+          {
+            "name": "SSD Capacity",
+            "value": "512 GB"
+          },
+          {
+            "name": "Screen Size",
+            "value": "15.6 inch"
+          },
+          {
+            "name": "System Memory",
+            "value": "16 GB"
+          }
+        ],
+        "url": "/reviews/COMHHNH8ZRHTGJ7H:88?reviewId=fe1c6030-1e4a-417b-8c9f-b797a31d0411"
+      },
+      {
+        "id": "303027fc-32ed-41f4-ad95-9ce62d5494a3",
+        "title": "Must buy!",
+        "text": "It is Pure Best",
+        "rating": 5,
+        "author": "Asif Shaikh",
+        "created": "23 days ago",
+        "location": "Washim, Maharashtra",
+        "certified_buyer": true,
+        "helpful_count": 0,
+        "upvote": null,
+        "downvote": null,
+        "images": [],
+        "product_attributes": [
+          {
+            "name": "Color",
+            "value": "Graphite Black"
+          },
+          {
+            "name": "Dedicated Graphic Memory Capacity",
+            "value": "4 GB"
+          },
+          {
+            "name": "Processor",
+            "value": "Ryzen 7 | 170"
+          },
+          {
+            "name": "SSD Capacity",
+            "value": "512 GB"
+          },
+          {
+            "name": "Screen Size",
+            "value": "15.6 inch"
+          },
+          {
+            "name": "System Memory",
+            "value": "16 GB"
+          }
+        ],
+        "url": "/reviews/COMHHNH8ZRHTGJ7H:87?reviewId=303027fc-32ed-41f4-ad95-9ce62d5494a3"
+      }
+    ],
+    "itm_id": "itm2a48b3e7ebd9c",
+    "total_review_count": 221,
+    "page": 1,
+    "page_size": 10,
+    "has_more": true,
+    "next_page": 2
+  }
+}
