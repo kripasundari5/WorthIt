@@ -3,12 +3,13 @@
 Run locally with: uvicorn api.main:app --reload
 """
 from __future__ import annotations
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException
 from sqlalchemy.exc import SQLAlchemyError
 
 from core.config import ASPECT_LABELS, RANKING_ASPECTS
-from core.db import get_session
+from core.db import get_session, init_db
 from core.explain import explain_recommendation
 from core.parser import parse_query
 from core.ranker import rank
@@ -20,10 +21,17 @@ from core.schemas import (
     Recommendation,
 )
 
+@asynccontextmanager
+async def lifespan(app):
+    init_db()
+    yield
+
+
 app = FastAPI(
     title="WorthIt Recommendation API",
     description="Trade-off-aware laptop recommendations from review-derived aspect scores.",
     version="1.0.0",
+    lifespan=lifespan,
 )
 
 

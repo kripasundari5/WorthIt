@@ -23,10 +23,12 @@ from core.config import (
     PRICE_WEIGHT,
     RANKING_ASPECTS,
 )
-from core.db import get_session
+from core.db import get_session, init_db
 from core.parser import _keyword_fallback as parse
 from core.ranker import rank
 from core.retrieve import fetch_candidates
+
+init_db()
 
 
 st.set_page_config(
